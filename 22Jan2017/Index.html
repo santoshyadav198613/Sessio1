@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="studentApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controller/studentcontroller.js"></script>
+    <script src="app/services/studentservice.js"></script>
+</head>
+<body ng-controller="studentcontroller">
+    {{1==1}}
+    <div ng-repeat="s in result">
+       <span ng-bind="s.FirstName"></span>
+    </div>
+    <div>
+        <input type="text" ng-model="student.firstName" />
+        <input type="text" ng-model="student.lastName" />
+        <input type="email" ng-model="student.email" />
+        <input type="datetime" ng-model="student.dob" />
+        <button class="btn green" ng-click="addStudent(student)">Add Student</button>
+    </div>
+</body>
+</html>
